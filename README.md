@@ -1,2 +1,3 @@
 # flask-bson
-Let your FLASK endpoints speak application/bson
+
+Let your FLASK endpoints speak `application/bson`.
