@@ -32,3 +32,6 @@ return bsonify(request.bson_data)
 if __name__ == '__main__':
 app.run(debug=True)
 ```
+
+See [demo/run.sh](demo/run.sh) for an example of how to use `curl` to send a
+BSON request.
