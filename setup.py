@@ -8,11 +8,11 @@ from setuptools import setup
 
 setup(
     name='Flask-BSON',
-    version='1.0',
+    version='0.1',
     url='http://www.github.com/jar-o/flask-bson/',
-    license='BSD',
+    license='MIT',
     author='James Robson',
-    author_email='your-email@example.com',
+    author_email='flask-bson@googlegroups.com',
     description='Let your flask endpoints handle BSON requests and responses',
     long_description=__doc__,
     py_modules=['flask_bson'],
