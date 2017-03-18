@@ -9,7 +9,7 @@ A Flask extension that gives you utilities to allow your Flask endpoints to proc
 You can install the extension with ``pip`` like
 
 ```
-	pip install flask-bson
+pip install flask-bson
 ```
 
 ## Usage
@@ -19,16 +19,16 @@ The extennsion relies on two pieces of functionality basically. The `accept_bson
 Here's a full sample implementation:
 
 ```
-    from flask import Flask, request
-    from flask_bson import accept_bson, bsonify
+from flask import Flask, request
+from flask_bson import accept_bson, bsonify
 
-    app = Flask(__name__)
+app = Flask(__name__)
 
-    @app.route('/', methods=['POST'])
-    @accept_bson(require_bson = True)
-    def echobson():
-    return bsonify(request.bson_data)
+@app.route('/', methods=['POST'])
+@accept_bson(require_bson = True)
+def echobson():
+return bsonify(request.bson_data)
 
-    if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == '__main__':
+app.run(debug=True)
 ```
