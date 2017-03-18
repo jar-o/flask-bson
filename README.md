@@ -27,10 +27,10 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 @accept_bson(require_bson = True)
 def echobson():
-return bsonify(request.bson_data)
+    return bsonify(request.bson_data)
 
 if __name__ == '__main__':
-app.run(debug=True)
+    app.run(debug=True)
 ```
 
 See [demo/run.sh](demo/run.sh) for an example of how to use `curl` to send a
