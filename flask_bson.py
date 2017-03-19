@@ -35,6 +35,3 @@ def bsonify(obj):
         return Response(bson.dumps(obj), mimetype='application/bson')
     except Exception, e:
         return ('Error, bsonify: ' + str(e), 400)
-
-
-
