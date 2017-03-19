@@ -13,7 +13,9 @@ appid=$!
 
 sleep 2
 
-val=$(cat "test.bson" | curl -sv -H 'Content-Type:application/bson' -X POST --data-binary @- http://localhost:5000/ | bsondump)
+bsonf='test.bson'
+
+val=$(cat "$bsonf" | curl -sv -H 'Content-Type:application/bson' -X POST --data-binary @- http://localhost:5000/ | bsondump)
 
 div "$val"
 echo "$val" > "test.json"
@@ -22,7 +24,7 @@ val=$(cat "not real bson, will fail" | curl -sv -H 'Content-Type:application/bso
 
 div "$val"
 
-fz1=`wc -c test.bson | awk '{print $1}'`
+fz1=`wc -c $bsonf | awk '{print $1}'`
 fz2=`wc -c test.json | awk '{print $1}'`
 pct=`echo "scale=5;$fz1/$fz2*100.0" | bc -l`
 
