@@ -3,7 +3,7 @@ from flask import request
 from functools import wraps
 import bson
 
-def accept_bson(require_bson = False, stream_at=1048576*5):
+def accept_bson(require_bson = False, stream_over=1048576*5):
     def decorator(func):
         @wraps(func)
         def decorated(*args, **kwargs):
