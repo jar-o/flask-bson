@@ -14,7 +14,7 @@ pip install flask-bson
 
 ## Usage
 
-The extennsion relies on two pieces of functionality basically. The `accept_bson` view decorator which parses requests into a usable `requests.bson_data` dictionary, and `bsonify` which works a lot like the much-loved `jsonify` -- it turns a dictionary into a valid BSON response.
+The extension relies on two pieces of functionality basically. The `accept_bson` view decorator which parses requests into a usable `requests.bson_data` dictionary, and `bsonify` which works a lot like the much-loved `jsonify` -- it turns a dictionary into a valid BSON response.
 
 Here's a full sample implementation:
 
